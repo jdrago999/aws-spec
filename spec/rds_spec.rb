@@ -8,7 +8,7 @@ describe "RDS" do
     subject(:db_instances) do
       rds.db_instances
     end
-    it { should have(0).instances }
+    it { should have(0).db_instances }
   end
 
 end
