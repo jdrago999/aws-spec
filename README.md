@@ -1,6 +1,6 @@
 # aws-spec
 
-## Overvie
+## Overview
 RSpec test code samples for AWS Infrastructure
 
 ## Configration
