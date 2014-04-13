@@ -9,4 +9,4 @@ Set your access key id and secret access key to config/aws.yml
 ## Running test
 Execute command
 
-  $ rspec spec
+    $ rspec spec
