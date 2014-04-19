@@ -24,5 +24,5 @@ describe "AutoScaling" do
     end
     it { should have(0).scheduled_actions }
   end
-  
+
 end
