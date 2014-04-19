@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require 'aws-sdk'
 
 config = YAML.load_file("config/aws.yml")
