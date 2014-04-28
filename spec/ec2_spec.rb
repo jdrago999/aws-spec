@@ -1,4 +1,4 @@
-require_relative "spec_helper"
+require "spec_helper"
 
 describe "EC2" do
   ec2 = AWS::EC2.new
@@ -46,4 +46,3 @@ describe "EC2" do
   end
 
 end
-

@@ -1,4 +1,4 @@
-require_relative "spec_helper"
+require "spec_helper"
 
 describe "AutoScaling" do
   auto_scaling = AWS::AutoScaling.new

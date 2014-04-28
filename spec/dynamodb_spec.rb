@@ -1,4 +1,4 @@
-require_relative "spec_helper"
+require "spec_helper"
 
 describe "DynamoDB" do
   dynamo_db = AWS::DynamoDB.new

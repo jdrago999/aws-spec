@@ -1,4 +1,4 @@
-require_relative "spec_helper"
+require "spec_helper"
 
 describe "Route53" do
   r53 = AWS::Route53.new

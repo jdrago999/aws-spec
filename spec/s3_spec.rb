@@ -1,4 +1,4 @@
-require_relative "spec_helper"
+require "spec_helper"
 
 describe "S3" do
   s3 = AWS::S3.new
