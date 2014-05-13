@@ -1,26 +1,23 @@
 require "spec_helper"
 
 describe "AutoScaling" do
-  auto_scaling = AWS::AutoScaling.new
+
+  before do
+    @auto_scaling = AWS::AutoScaling.new
+  end
 
   describe "Auto Scaling Groups" do
-    subject(:auto_scaling_groups) do
-      auto_scaling.groups
-    end
+    subject { @auto_scaling.groups }
     it { should have(0).auto_scaling_groups }
   end
 
   describe "Launch Configurations" do
-    subject(:launch_configurations) do
-      auto_scaling.launch_configurations
-    end
+    subject { @auto_scaling.launch_configurations }
     it { should have(0).launch_configurations }
   end
 
   describe "Scheduled Actions" do
-    subject(:scheduled_actions) do
-      auto_scaling.scheduled_actions
-    end
+    subject { @auto_scaling.scheduled_actions }
     it { should have(0).scheduled_actions }
   end
 

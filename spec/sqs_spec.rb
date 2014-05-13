@@ -1,12 +1,12 @@
 require "spec_helper"
 
 describe "SQS" do
-  sqs = AWS::SQS.new
+  before do
+    @sqs = AWS::SQS.new
+  end
 
   describe "Queues" do
-    subject(:queues) do
-      sqs.queues
-    end
+    subject { @sqs.queues }
     it { should have(0).queues }
   end
 

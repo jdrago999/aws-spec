@@ -1,12 +1,12 @@
 require "spec_helper"
 
 describe "S3" do
-  s3 = AWS::S3.new
+  before do
+    @s3 = AWS::S3.new
+  end
 
   describe "Buckets" do
-    subject(:buckets) do
-      s3.buckets
-    end
+    subject { @s3.buckets }
     it { should have(0).buckets }
   end
 

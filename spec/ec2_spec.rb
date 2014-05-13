@@ -1,110 +1,83 @@
 require "spec_helper"
 
 describe "EC2" do
-  ec2 = AWS::EC2.new
+
+  before do
+    @ec2 = AWS::EC2.new
+  end
 
   describe "VPCs" do
-    subject(:vpcs) do
-      ec2.vpcs
-    end
+    subject { @ec2.vpcs }
     it { should have(1).vpcs }
   end
 
   describe "Subnets" do
-    subject(:subnets) do
-      ec2.subnets
-    end
+    subject { @ec2.subnets }
     it { should have(2).subnets }
   end
 
   describe "VPN Gateways" do
-    subject(:vpn_gateways) do
-      ec2.vpn_gateways
-    end
+    subject { @ec2.vpn_gateways }
     it { should have(0).vpn_gateways }
   end
 
   describe "Internet Gateways" do
-    subject(:internet_gateways) do
-      ec2.internet_gateways
-    end
+    subject { @ec2.internet_gateways }
     it { should have(1).internet_gateways }
   end
 
   describe "Customer Gateways" do
-    subject(:customer_gateways) do
-      ec2.customer_gateways
-    end
+    subject { @ec2.customer_gateways }
     it { should have(0).customer_gateways }
   end
 
   describe "VPN Connections" do
-    subject(:vpn_connections) do
-      ec2.vpn_connections
-    end
+    subject { @ec2.vpn_connections }
     it { should have(0).vpn_connections }
   end
 
   describe "Network ACLs" do
-    subject(:network_acls) do
-      ec2.network_acls
-    end
+    subject { @ec2.network_acls }
     it { should have(1).network_acls }
   end
 
   describe "Route Tables" do
-    subject(:route_tables) do
-      ec2.route_tables
-    end
+    subject { @ec2.route_tables }
     it { should have(1).route_tables }
   end
 
   describe "DHCP Optinos" do
-    subject(:dhcp_options) do
-      ec2.dhcp_options
-    end
+    subject { @ec2.dhcp_options }
     it { should have(1).dhcp_options }
   end
 
   describe "Instances" do
-    subject(:instances) do
-      ec2.instances
-    end
+    subject { @ec2.instances }
     it { should have(0).instances }
   end
 
   describe "Volumes" do
-    subject(:volume) do
-      ec2.volumes
-    end
+    subject { @ec2.volumes }
     it { should have(0).volumes }
   end
 
   describe "Elastic IPs" do
-    subject(:elastic_ips) do
-      ec2.elastic_ips
-    end
+    subject { @ec2.elastic_ips }
     it { should have(0).elastic_ips }
   end
 
   describe "Key Pairs" do
-    subject(:key_pairs) do
-      ec2.key_pairs
-    end
+    subject { @ec2.key_pairs }
     it { should have(0).key_pairs }
   end
 
   describe "Snapshots" do
-    subject(:snapshots) do
-      ec2.snapshots.with_owner(:self)
-    end
+    subject { @ec2.snapshots.with_owner(:self) }
     it { should have(0).snapshots }
   end
 
   describe "Security Group" do
-    subject(:security_groups) do
-      ec2.security_groups
-    end
+    subject { @ec2.security_groups }
     it { should have(1).security_groups }
   end
 

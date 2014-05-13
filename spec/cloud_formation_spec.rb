@@ -1,12 +1,12 @@
 require "spec_helper"
 
 describe "CloudFormation" do
-  cf = AWS::CloudFormation.new
+  before do
+    @cloud_formation = AWS::CloudFormation.new
+  end
 
   describe "Stacks" do
-    subject(:stacks) do
-      cf.stacks
-    end
+    subject { @cloud_formation.stacks }
     it { should have(0).stacks }
   end
 

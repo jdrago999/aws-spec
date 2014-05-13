@@ -1,12 +1,12 @@
 require "spec_helper"
 
 describe "DynamoDB" do
-  dynamo_db = AWS::DynamoDB.new
+  before do
+    @dynamo_db = AWS::DynamoDB.new
+  end
 
   describe "Tables" do
-    subject(:tables) do
-      dynamo_db.tables
-    end
+    subject { @dynamo_db.tables }
     it { should have(0).tables }
   end
 
