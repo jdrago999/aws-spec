@@ -1,12 +1,12 @@
 require "spec_helper"
 
 describe "SimpleWorkflow" do
-  swf = AWS::SimpleWorkflow.new
+  before do
+    @simple_workflow = AWS::SimpleWorkflow.new
+  end
 
   describe "Domains" do
-    subject(:domains) do
-      swf.domains
-    end
+    subject { @simple_workflow.domains }
     it { should have(0).domains }
   end
 

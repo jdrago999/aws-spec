@@ -1,12 +1,12 @@
 require "spec_helper"
 
 describe "ELB" do
-  elb = AWS::ELB.new
+  before do
+    @elb = AWS::ELB.new
+  end
 
   describe "Load Balancers" do
-    subject(:load_balancers) do
-      elb.load_balancers
-    end
+    subject { @elb.load_balancers }
     it { should have(0).load_balancers }
   end
 

@@ -1,12 +1,12 @@
 require "spec_helper"
 
 describe "SimpleDB" do
-  sdb = AWS::SimpleDB.new
+  before do
+    @simple_db = AWS::SimpleDB.new
+  end
 
   describe "Domains" do
-    subject(:domains) do
-      sdb.domains
-    end
+    subject { @simple_db.domains }
     it { should have(0).domains }
   end
 

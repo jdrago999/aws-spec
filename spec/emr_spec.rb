@@ -1,12 +1,12 @@
 require "spec_helper"
 
 describe "EMR" do
-  emr = AWS::EMR.new
+  before do
+    @emr = AWS::EMR.new
+  end
 
   describe "Job Flows" do
-    subject(:job_flows) do
-      emr.job_flows
-    end
+    subject { @emr.job_flows }
     it { should have(0).job_flows }
   end
 
