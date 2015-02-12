@@ -4,6 +4,7 @@ describe "EC2" do
 
   before do
     @ec2 = AWS::EC2.new
+    @number_of_az = @ec2.availability_zones.count
   end
 
   describe "VPCs" do
@@ -13,7 +14,7 @@ describe "EC2" do
 
   describe "Subnets" do
     subject { @ec2.subnets }
-    it { is_expected have(2).subnets }
+    it { is_expected have(@number_of_az).subnets }
   end
 
   describe "VPN Gateways" do
