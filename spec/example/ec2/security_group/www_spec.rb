@@ -30,19 +30,19 @@ describe "Security Group" do
   end
 
   describe "security_groups" do
-    it { @security_group.should_not be_nil }
+    it { @security_group.is_expected_not be_nil }
   end
 
   describe "vpc?" do
-    it { @security_group.vpc?.should be_true }
+    it { @security_group.vpc?.is_expected be_true }
   end
 
   describe "inbound" do
-    it { @security_group.ip_permissions_list.eql?(@inbound).should be_true }
+    it { @security_group.ip_permissions_list.eql?(@inbound).is_expected be_true }
   end
 
   describe "outbound" do
-    it { @security_group.ip_permissions_list_egress.eql?(@outbound).should be_true }
+    it { @security_group.ip_permissions_list_egress.eql?(@outbound).is_expected be_true }
   end
 
 end
