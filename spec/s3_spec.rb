@@ -7,7 +7,7 @@ describe "S3" do
 
   describe "Buckets" do
     subject { @s3.buckets }
-    it { should have(0).buckets }
+    it { is_expected have(0).buckets }
   end
 
 end
