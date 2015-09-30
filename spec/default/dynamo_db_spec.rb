@@ -7,7 +7,7 @@ describe "DynamoDB" do
 
   describe "Tables" do
     subject { @dynamo_db.tables }
-    it { is_expected have(0).tables }
+    it { should have(0).tables }
   end
 
 end

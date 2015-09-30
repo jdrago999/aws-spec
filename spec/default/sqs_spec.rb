@@ -7,7 +7,7 @@ describe "SQS" do
 
   describe "Queues" do
     subject { @sqs.queues }
-    it { is_expected have(0).queues }
+    it { should have(0).queues }
   end
 
 end

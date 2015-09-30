@@ -7,7 +7,7 @@ describe "Route53" do
 
   describe "Hosted Zones" do
     subject { @route53.hosted_zones }
-    it { is_expected have(0).hosted_zones }
+    it { should have(0).hosted_zones }
   end
 
 end

@@ -7,7 +7,7 @@ describe "SimpleWorkflow" do
 
   describe "Domains" do
     subject { @simple_workflow.domains }
-    it { is_expected have(0).domains }
+    it { should have(0).domains }
   end
 
 end

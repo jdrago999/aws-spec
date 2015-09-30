@@ -7,7 +7,7 @@ describe "Redshift" do
 
   describe "Clusters" do
     subject { @redshift.client.describe_clusters[:clusters] }
-    it { is_expected have(0).clusters }
+    it { should have(0).clusters }
   end
 
 end

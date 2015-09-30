@@ -7,7 +7,7 @@ describe "ElastiCache" do
 
   describe "Clusters" do
     subject { @elasti_cache.client.describe_cache_clusters[:cache_clusters] }
-    it { is_expected have(0).clusters }
+    it { should have(0).clusters }
   end
 
 end

@@ -7,7 +7,7 @@ describe "CloudFront" do
 
   describe "Distributions" do
     subject { @cloud_front.client.list_distributions[:items] }
-    it { is_expected have(0).distributions }
+    it { should have(0).distributions }
   end
 
 end

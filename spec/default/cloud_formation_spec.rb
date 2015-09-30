@@ -7,7 +7,7 @@ describe "CloudFormation" do
 
   describe "Stacks" do
     subject { @cloud_formation.stacks }
-    it { is_expected have(0).stacks }
+    it { should have(0).stacks }
   end
 
 end

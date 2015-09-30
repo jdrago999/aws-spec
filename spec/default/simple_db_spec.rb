@@ -7,7 +7,7 @@ describe "SimpleDB" do
 
   describe "Domains" do
     subject { @simple_db.domains }
-    it { is_expected have(0).domains }
+    it { should have(0).domains }
   end
 
 end

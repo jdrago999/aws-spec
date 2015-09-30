@@ -7,7 +7,7 @@ describe "ELB" do
 
   describe "Load Balancers" do
     subject { @elb.load_balancers }
-    it { is_expected have(0).load_balancers }
+    it { should have(0).load_balancers }
   end
 
 end

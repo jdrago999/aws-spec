@@ -7,7 +7,7 @@ describe "RDS" do
 
   describe "DB Instances" do
     subject { @rds.db_instances }
-    it { is_expected have(0).db_instances }
+    it { should have(0).db_instances }
   end
 
 end
